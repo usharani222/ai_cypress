@@ -1,1 +1,4 @@
-export const COHERE_API_KEY = 'Yx7cUJiwzgjnCPAmTh5pkVNXVgA2xNFYryoHsS9l';
+import dotenv from 'dotenv';
+dotenv.config();
+
+export const COHERE_API_KEY = process.env.COHERE_API_KEY;
