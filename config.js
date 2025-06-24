@@ -1,0 +1,1 @@
+export const COHERE_API_KEY = 'Yx7cUJiwzgjnCPAmTh5pkVNXVgA2xNFYryoHsS9l';

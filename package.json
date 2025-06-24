@@ -1,0 +1,19 @@
+{
+  "name": "ai-cypress-cohere-gen",
+  "version": "1.0.0",
+  "description": "AI Cypress Test Generator using Cohere API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node classifier/classify.js"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cheerio": "^1.1.0",
+    "cohere-ai": "^4.6.0",
+    "puppeteer": "^24.10.2"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3"
+  }
+}
