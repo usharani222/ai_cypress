@@ -19,7 +19,7 @@ const steps = [
   { command: `node classifier/classify.js`, message: '🧠 Classifying DOM elements with Cohere...' },
   { command: `node generator/generate-testcases.js`, message: '📝 Generating Cypress test cases from classified elements...' },
   { command: `node generator/write-specfile.js`, message: '📄 Writing Cypress test spec file...' },
-  { command: `npx cypress run`, message: '🚀 Running Cypress E2E tests and generating report...' }
+  { command: `npx cypress run --headed`, message: '🚀 Running Cypress E2E tests and generating report...' }
 ];
 
 // Execute sequentially with logs
