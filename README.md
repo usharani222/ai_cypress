@@ -135,13 +135,6 @@ podman cp ai-cypress:/home/appuser/ai_cypress/cypress/reports ./reports
 - `cy.wait()` is dynamically added to handle slow-loading pages.
 
 ---
-
-## License
-
-MIT License
-
----
-
 ## Author
 
 - G Usha Rani 
