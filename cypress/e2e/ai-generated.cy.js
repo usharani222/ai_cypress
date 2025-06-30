@@ -1,47 +1,49 @@
-describe('Web Page Elements Testing', () => {
-    beforeEach(() => {
-        cy.visit('http://development.flint-lab.com:3030/')
-    })
+describe('GeeksforGeeks.org E2E Tests', () => {
+  beforeEach(() => {
+    cy.visit('https://www.geeksforgeeks.org');
+    cy.wait(2000);
+  });
 
-    it('Should have email input field', () => {
-        cy.get('input[name="email"]')
-            .should('be.visible')
-            .and('have.attr', 'type', 'email')
-            .and('have.attr', 'placeholder', 'Email address')
-            .and('have.class', 'border-solid border-[2px] py-[4px] px-[40px] border-[#000] rounded-[20px]')
-    })
+  it('should display the GeeksforGeeks logo', () => {
+    cy.get('a.headerMainLogo').should('be.visible');
+  });
 
-    it('Should have password input field', () => {
-        cy.get('input[name="password"]')
-            .should('be.visible')
-            .and('have.attr', 'type', 'password')
-            .and('have.attr', 'placeholder', 'Password')
-            .and('have.class', 'border-solid border-[2px] py-[4px] px-[40px] border-[#000] rounded-[20px]')
-    })
+  it('should have a Sign In button', () => {
+    cy.get('button.signinButton').should('be.visible');
+    cy.get('button.signinButton').click();
+    cy.wait(2000);
+    // Add assertions for the expected behavior after clicking Sign In
+  });
 
-    it('Should have login button', () => {
-        cy.get('button#login-submit-button')
-            .should('be.visible')
-            .and('contain', 'Log In')
-            .and('have.class', 'bg-[#032C63] rounded-[22px] font-bold text-[20px] text-white py-[8px] w-[100%]')
-    })
+  it('should display Courses link', () => {
+    cy.get('a').contains('Courses').should('be.visible');
+    cy.get('a').contains('Courses').click();
+    cy.wait(2000);
+    // Add assertions for the expected behavior after clicking Courses link
+  });
 
-    it('Should login with valid credentials', () => {
-        const email = 'test@example.com'
-        const password = 'password123!'
+  it('should display DSA to Development link', () => {
+    cy.get('a').contains('DSA to Development').should('be.visible');
+    cy.get('a').contains('DSA to Development').click();
+    cy.wait(2000);
+    // Add assertions for the expected behavior after clicking the link
+  });
 
-        cy.get('input[name="email"]').type(email)
-        cy.get('input[name="password"]').type(password)
-        cy.get('button#login-submit-button').click()
+  // Add similar test cases for other links and buttons on the page
 
-        // Add further assertions based on successful login behavior
-    })
+  it('should perform a search', () => {
+    cy.get('input').type('Data Structures{enter}');
+    cy.wait(2000);
+    // Add assertions to verify the search results
+  });
 
-    it('Should not login with invalid credentials', () => {
-        cy.get('input[name="email"]').type('invalidemail')
-        cy.get('input[name="password"]').type('wrongpassword')
-        cy.get('button#login-submit-button').click()
+  it('should select a topic from the dropdown', () => {
+    cy.get('button.gfgGoogleTranslate').click();
+    cy.get('button').contains('Select Language').click();
+    cy.get('button').contains('Hindi').click();
+    cy.wait(2000);
+    // Add assertions to verify the language change
+  });
 
-        // Add further assertions based on failed login behavior
-    })
-})
+  // Add more test cases for other interactive elements on the page
+});
