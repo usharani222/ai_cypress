@@ -130,10 +130,12 @@ podman cp ai-cypress:/home/appuser/ai_cypress/cypress/reports ./reports
 
 ## Execution inside the container
 
-<video width="640" height="360" controls>
-  <source src="./github_container.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[▶️ Watch Execution Video](https://github.com/usharani222/ai_cypress/blob/main/github_container.mp4?raw=true)
+
+## Execution inside the container
+
+[▶️ Watch Execution Video](https://github.com/usharani222/ai_cypress/blob/main/github_container_reports.mp4?raw=true)
+
 
 ## Extraction of reports outside container
 
